@@ -1,0 +1,118 @@
+:root {
+  --color-bg: #ffffff;
+  --transparent-bg: rgba(255, 255, 255, 0.85);
+  --color-primary: #001343;
+  --color-secondary: #000000;
+  --font-body: "Open Sans", sans-serif;
+  --font-special: "Exo 2", sans-serif;
+  --font-size-body: 1.2rem;
+  --font-size-special: 1.6rem;
+  --font-size-title: 2.4rem;
+}
+
+* {
+  font-family: "Open Sans", sans-serif;
+}
+
+body {
+  overflow-x: hidden;
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Exo 2", sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+nav {
+  display: none;
+}
+
+header {
+  background: var(--color-bg);
+  padding: 1rem 0.8rem;
+}
+
+header a {
+  text-decoration: none;
+}
+
+header h1 {
+  font-size: var(--font-size-special);
+  color: var(--color-primary);
+}
+
+.hero-img-container {
+  width: 100vw;
+}
+
+.hero-img-container img {
+  object-fit: none;
+  height: 60vh;
+  max-width: 100%;
+}
+
+.hero-content {
+  background: var(--color-bg);
+  position: relative;
+  padding: 1rem;
+}
+
+.hero-content h2 {
+  color: var(--color-primary);
+  font-size: var(--font-size-title);
+}
+
+.hero-content * {
+  color: var(--color-secondary);
+}
+
+.svg-icon {
+  display: inline-flex;
+  align-items: center;
+}
+
+.svg-icon.baseline img {
+  top: 0.2em;
+  position: relative;
+}
+
+.icon {
+  height: var(--font-size-body);
+  width: var(--font-size-body);
+}
+
+footer {
+  background: var(--color-primary);
+  font-family: var(--font-special);
+  color: var(--color-bg);
+  padding: 5rem 1rem 3rem 1rem;
+  text-align: center;
+}
+
+@media screen and (min-width: 768px) {
+  .hero {
+    --height: 750px;
+    height: var(--height);
+    position: relative;
+  }
+
+  .hero-img-container img {
+    object-fit: cover;
+    height: var(--height);
+    width: 100%;
+  }
+
+  .hero-content {
+    position: absolute;
+    padding: 2rem;
+    bottom: calc(var(--height) / 10);
+    right: calc(var(--height) / 10);
+    max-width: 34%;
+  }
+}
