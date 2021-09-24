@@ -87,6 +87,10 @@ header h1 {
   width: var(--font-size-body);
 }
 
+.hero-content li {
+  margin: 0.5rem 0;
+}
+
 footer {
   background: var(--color-primary);
   font-family: var(--font-special);
